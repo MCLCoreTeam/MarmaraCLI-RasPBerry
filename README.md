@@ -86,10 +86,13 @@ sudo ldconfig
 Part 4
 ```
 cd ~
-wget https://github.com/narGoThic/Raspberry-Marmara/releases/download/RaspberryKOMODO/MarmaraCLI.tar.gz
-tar -xvf MarmaraCLI.tar.gz
-mkdir .zcash-params
-mv ~/MarmaraCLI/.zcash-params/* ~/.zcash-params
+wget https://github.com/narGoThic/MarmaraCLI-RasPBerry/raw/master/MarmaraCLI-RasP.zip
+mkdir Marmara
+mv MarmaraCLI-RasP.zip Marmara/
+cd Marmara/
+sudo unzip MarmaraCLI-RasP.zip
+sudo chmod +x fetch-params.sh
+sudo ./fetch-params.sh
 ```
 
 Kullanım 
@@ -97,7 +100,7 @@ Kullanım
 ```
 cd ~/MarmaraCLI
 ./marmarad -ac_name=MTST3 $1 $2 $3 $4  // Start
-./marmara -ac_name=MTST3 $1 $2 $3 $4 // Komutlar
+./marmara-cli -ac_name=MTST3 $1 $2 $3 $4 // Komutlar
 ```
 
 
